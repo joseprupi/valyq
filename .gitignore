@@ -1,0 +1,9 @@
+.gitignore:
+Add:
+.env
+*.log
+/submissions/
+/logs/
+auth_store.json
+__pycache__/
+*.pyc

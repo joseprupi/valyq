@@ -1,0 +1,104 @@
+.test-results-container {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.tab.active {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #2196f3;
+}
+
+.tab-content {
+  background-color: #fff;
+}
+
+.test-code {
+  margin: 0;
+  padding: 0;
+}
+
+/* Override syntax highlighter default styles */
+.test-code pre {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.result-section {
+  padding: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.result-section:last-child {
+  border-bottom: none;
+}
+
+.result-filename {
+  margin: 0 0 1rem 0;
+  color: #666;
+}
+
+.markdown-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.markdown-image {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-error {
+  color: #dc3545;
+  padding: 0.5rem;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  margin: 1rem 0;
+  background-color: #fff;
+}
+
+.markdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.inline-code {
+  background-color: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: monospace;
+  color: #e83e8c;
+}

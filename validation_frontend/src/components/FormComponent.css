@@ -1,0 +1,194 @@
+.page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.file-input-container {
+  margin-bottom: 1rem;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-input-label {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-input-label:hover {
+  background: #e0e0e0;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  color: #666;
+}
+
+.button {
+  background: #0066cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover:not(.disabled) {
+  background: #0052a3;
+}
+
+.button.disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #e8f5e9;
+  border-radius: 4px;
+  color: #2e7d32;
+}
+
+.error {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #ffebee;
+  border-radius: 4px;
+  color: #c62828;
+}
+
+.validation-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e3f2fd;
+  border-radius: 4px;
+}
+
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.tab-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tab {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  background: #0066cc;
+  color: white;
+}
+
+.close-tab {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.add-tab {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-test-container {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.test-title-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.results-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.load-validation-container {
+  margin-bottom: 2rem;
+}
+
+.load-form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.validation-id-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button.secondary {
+  background: #666;
+}
+
+.button.secondary:hover:not(.disabled) {
+  background: #555;
+}

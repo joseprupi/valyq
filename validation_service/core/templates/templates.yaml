@@ -1,0 +1,132 @@
+# templates.yaml
+documentation_template: |
+  described as: "{content}"
+
+code_template: |
+  has been trained with this code: "{content}"
+
+train_template: |
+  its training data used to train the model found at {path}
+
+test_template: |
+  its test data used to measure the performance of the model found at {path}
+
+pickle_template: |
+  its trained model and generated from the provided code can be found at {path}
+
+test_generation_template: |
+  Given below code to train a model {documentation} and according to sr 11-7, could you give me a list of python tests 
+  that could be executed to a credit model? Give me exclusively the list of tests with the name and description 
+  of the test, without the code and no other text.
+
+  Code:
+  {code}
+
+test_generation_json_template: |
+  Given a model {documentation} implemented as {code} and according to sr 11-7, could you give me a list of the 3 most 
+  relevant Python tests that could be executed to a the model? Give me exclusively the list of tests with the name and 
+  description of the test without the code.
+
+  The tests should cover below areas:
+
+  1. Model Input Tests
+  Data Quality Checks: Ensure completeness, accuracy, and relevance of inputs.
+  Sensitivity Analysis: Test how changes in inputs affect outputs.
+
+  2. Statistical Tests
+  Backtesting: Compare model predictions to historical outcomes.
+  Goodness-of-Fit: Use statistical measures (e.g., R-squared, AUC-ROC) to assess fit.
+  Stability Tests: Evaluate model consistency over time.
+
+  3. Stress Testing
+  Examine how the model performs under extreme or unusual scenarios.
+  Identify vulnerabilities and assess robustness.
+
+  4. Benchmarking
+  Compare the model's results to those of alternative models or industry standards.
+
+  5. Challenger Models
+  Develop and test alternative models to challenge the primary model's assumptions and performance.
+
+  6. Residual Analysis
+  Analyze residuals to ensure the model does not have systematic biases.
+
+  7. Scenario Analysis
+  Test the model under different plausible future scenarios.
+  Evaluate implications for decision-making and risk assessment.
+
+  8. Implementation Testing
+  Unit Testing: Validate individual components of the model.
+  Integration Testing: Test how the model functions within the broader system.
+
+  9. Performance Metrics
+  Monitor key performance indicators (KPIs) such as predictive accuracy, Type I/II errors, and runtime efficiency.
+
+  10. Limitations and Assumptions Testing
+  Validate the reasonableness of key assumptions.
+  Identify limitations and evaluate their potential impacts.
+
+  Respond with a list in JSON format like:
+  [
+      {{
+          test: Test title,
+          area: What area of the validation belongs to
+          description: Test Description. The description should be very detailed, explaining all the outputs it is generating. 
+      }}
+  ]
+
+independent_test_template: |
+  If you have a model {documentation} {code} {train} {test} {pickle}, implement a Python test {test_title}, 
+  described as {test_description}.
+
+  I want you to generate a self contained Python script that will be executed using the exec function in another Python process. All the code has to be in one block and has to contain a call to execute the test.
+
+  Please ensure the code meets the following criteria:
+
+  1: The code should create the folder {test_folder} to save all the outputs
+  2: Generate visualizations when possible and save them inside {test_folder}. Add titles to the axis and legends to all of them
+  3: Add all the generated images to the reports with proper explanation of them
+  4: Do proper error handling to not interrupt the execution
+  5: Generate a report with Markdown called report.md, containing the results, visualizations and save it 
+     inside {test_folder}. The report has to explain with detail what the test is doing
+  7: All the code should be inside one single snippet of Python code
+  8: All the code should be between ```python and ```
+  9: Never use ``` inside the code
+  10: Only print errors that have affected the execution, nothing else
+  11: If an error is caught, print the message
+
+validation_template: |
+  If you have a model {documentation} {code} {train} {test} {pickle}, create a set of tests for a validation report 
+  covering the needs according to SR 11-7 and implemented in python. The report should be extensive and add visualizations.
+
+  The Python response has to contain all the tests and a call that executes the entire set of tests, 
+  the call should not stop (no asserts).
+
+  Create a report as a tex file with the results and the images and logs from the execution. 
+  The report tex file name has to be {report_tex_name}
+
+  Make the execution of each test independent on runtime, catching and saving errors but making its execution continous.
+
+  The response should only contain one block of Python code.
+
+  Save all the files (tex and images) inside the folder {execution_folder}.
+
+external_validation_template: |
+  If you have a model consisting of {documentation}, {code}, {train}, {test}, and {pickle}, 
+  and below list of tests to be implemented and to comply with SR 11-7:
+
+  {tests}
+
+  Be sure you implement all of them and follow below instructions:
+
+  1 Implement the specified set of tests in Python incorporating visualizations where possible.
+  2 Provide a Python script containing:
+   - All the tests.
+   - A call to execute the complete set of tests sequentially, ensuring that execution does not halt due to errors. 
+   - Errors should be caught and logged for reporting.
+  3 Generate a report in LaTeX format ({report_tex_name}) that includes:
+   - Results.
+   - Images and logs from the test executions.
+
+  4 Save all output files (LaTeX report and images) inside the folder {execution_folder}.
+  5 The Python response should consist of a single block of code fulfilling all the requirements.

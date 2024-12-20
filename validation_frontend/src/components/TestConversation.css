@@ -1,0 +1,186 @@
+.test-conversation {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .tab:hover {
+    background-color: #eee;
+  }
+  
+  .tab.active {
+    background-color: white;
+    color: #000;
+    border-bottom: 2px solid #2196f3;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+    background-color: white;
+  }
+  
+  .result-item {
+    margin-bottom: 1rem;
+  }
+  
+  .result-item h4 {
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .result-item pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  
+  .code-view pre {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 0;
+    overflow-x: auto;
+  }
+  
+  .conversation-history {
+    padding: 1rem;
+    border-top: 1px solid #e1e1e1;
+  }
+  
+  .conversation-history h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+  }
+  
+  .message.user {
+    background-color: #e3f2fd;
+    margin-left: 2rem;
+  }
+  
+  .message.assistant {
+    background-color: #f5f5f5;
+    margin-right: 2rem;
+  }
+  
+  .message-header {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .follow-up-form {
+    padding: 1rem;
+    border-top: 1px solid #e1e1e1;
+  }
+  
+  .follow-up-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #1976d2;
+  }
+  
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* ... previous styles ... */
+
+.markdown-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .markdown-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .image-error {
+    color: #dc3545;
+    padding: 0.5rem;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .markdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  .markdown-table th,
+  .markdown-table td {
+    border: 1px solid #e1e1e1;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  .markdown-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .code-block {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+  
+  .inline-code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #e83e8c;
+  }
