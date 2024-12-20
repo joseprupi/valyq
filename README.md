@@ -4,6 +4,8 @@
 
 An intelligent model validation platform inspired by financial model validation practices and regulatory guidelines (SR 11-7), leveraging Large Language Models (LLMs) to automate and enhance the testing and validation of machine learning models. This tool helps validation analysts, data scientists and ML engineers ensure their models meet quality standards, are well-documented, and behave as expected, following principles similar to those used in financial model risk management.
 
+[![Watch the video](https://img.youtube.com/vi/RcoGamSrlXg/hqdefault.jpg)](https://youtu.be/RcoGamSrlXg)
+
 ## Background
 
 This project is inspired in financial model validation practices, particularly the Federal Reserve's Supervisory Guidance on Model Risk Management (SR 11-7). While SR 11-7 provides guidance for financial institutions on model risk management, its principles of rigorous validation, documentation, and testing are valuable for all types of machine learning models. Key aspects incorporated from SR 11-7 include:
